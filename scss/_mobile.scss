@@ -1,0 +1,461 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Varela+Round);
+
+body {
+  background: $color-background;
+}
+
+h2{
+    font-weight: 100;
+    font-family: 'Copperplate', serif;
+}
+
+.number_in_left_corner{
+    text-align: left;
+    margin-left: 5rem;
+    padding-top: 2rem;
+    font-size:3.5rem;
+    font-family: 'copperplate', serif;
+    color: $color-rubrik;
+}
+.first_page_container {
+  text-align: center;
+  margin:  0 auto;
+  background-image: url(../photos/index.jpg);
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  
+  a {
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    color: $color-main;
+    text-decoration: none;
+    font-size: 20px;
+    overflow: hidden;
+    top: 5px;
+  }
+    .icons_on_firstpage{
+        position: relative;
+        font-family: 'Varela Round', serif;
+        top: 50%;
+        float:right;
+        
+
+        ul {
+            list-style: none;
+            display: inline-flex;
+
+            li{
+                padding: 3rem;
+
+                a{
+                    font-size: 2.5rem;
+                }
+            }
+        } 
+    }
+}
+
+.button_container {
+  position: fixed;
+  top: 5%;
+  right: 3%;
+  height: $button-height;
+  width: $button-width;
+  cursor: pointer;
+  z-index: 100;
+  transition: opacity .25s ease;
+  
+  &:hover {
+    opacity: .7;
+  }
+  
+  &.active {
+    
+    .top {
+      transform: translateY(11px) translateX(0) rotate(45deg);
+      background: $color-active;
+    }
+    .middle {
+      opacity: 0;
+      background: $color-active;
+    }
+    
+    .bottom {
+      transform: translateY(-11px) translateX(0) rotate(-45deg);
+      background: $color-active;
+    }
+  }
+  
+  span {
+  background: $color-link;
+  border: none;
+  height: 5px;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition:  all .35s ease;
+  cursor: pointer;
+    
+    &:nth-of-type(2) {
+      top: 11px;
+    }
+    
+    &:nth-of-type(3) {
+      top: 22px;
+    }
+  }
+}
+
+.overlay {
+  position: fixed;
+  background: $color-main;
+  top: 0;
+  width: 100%;
+  opacity: 10;
+  visibility: hidden;
+  transition: opacity .35s, visibility .35s, height .35s;
+  overflow: hidden;
+  
+  &.open {
+    opacity: .9;
+    visibility: visible;
+    height: 100%;
+    z-index: 1;
+    
+    li {
+      animation: fadeInRight .5s ease forwards;
+      animation-delay: .35s;
+      
+      &:nth-of-type(2) {
+        animation-delay: .4s;
+      }
+      &:nth-of-type(3) {
+        animation-delay: .45s;
+      }
+      &:nth-of-type(4) {
+        animation-delay: .50s;
+      }
+    }
+  }
+  nav {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: 'copperplate', serif;
+    
+  }
+  ul {
+    list-style: none;
+    margin: 0 auto;
+    display: inline-block;
+    position: relative;
+    
+    li {
+      display: block;
+      min-height: 70px;
+      position: relative;
+      opacity: 0;
+      
+      a {
+        display: block;
+        position: relative;
+        color: $color-link;
+        text-decoration: none;
+        overflow: hidden;
+        
+        &:hover:after,
+         &:focus:after,
+         &:active:after {
+           width: 100%;
+         }
+        
+        &:after {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          left: 50%;
+          width: 0%;
+          transform: translateX(-50%);
+          height: 3px;
+          background: $color-link;
+          transition: .35s;
+        }
+      }
+    }
+  }
+}
+
+/* Ikoner i hamburgermenyn */
+
+.icons{
+    position: relative;
+    font-family: 'Varela Round', serif;
+    text-align: center;
+
+    ul {
+        list-style: none;
+        display: inline-flex;
+
+        li{
+            padding: 3rem;
+
+            a{
+                font-size: 3rem;
+            }
+        }
+    } 
+}
+
+/* navbaren på sidan */
+
+.navbar-nav{
+    position: fixed;
+    left: 90%;
+    top: 40%;
+    color: $color-rubrik;
+    
+
+    li{
+        padding-bottom:6rem;
+        font-size: 1rem;
+
+        p{
+            margin: 0;
+            text-decoration: underline;
+            font-weight: 600;
+            font-family: 'Copperplate', serif;
+        }
+
+        a{
+            color:$color-link;
+        }
+
+    }
+
+}
+
+
+.transparent{
+    background-color: transparent;
+    border: none;
+}
+
+.navbar-inverse .navbar-nav>li>a {
+    color:$color-link;
+    font-weight: bold;
+}
+
+.navbar-inverse .navbar-nav>.active>a{
+    background-color: transparent;
+    color: $color-link;
+    font-size: 3rem;
+    transform: rotate(-90deg);
+
+    &:hover{
+        background-color: transparent;
+        color: $color-active;
+
+    }
+}
+
+.navbar-inverse .navbar-nav>li>a:hover {
+    color: $color-active;
+}
+
+/* Loggan och boxen i mitten av indexbilden */
+
+.logo_and_explore_container{
+    position: relative;
+    top: 40%;
+
+    img{
+        width: 70%;
+        margin-bottom: 2rem;
+    }
+
+    .explore_box{
+        border: 1px solid black;
+        width: 70%;
+        margin: 0 auto;
+        padding: 1.5rem 0 0.5rem 0;
+        font-size: 0.8rem;
+
+        h2{
+            font-size: 2.2rem;
+        }
+
+        a{
+            color: $color-link;
+        }
+
+        a:hover{
+            color: lighten(black, 90)
+        }
+
+        .explore_box_arrow{
+            font-size: 2rem;
+            padding-top: 1rem;
+        }
+    }
+}
+
+.clear{
+    clear: both;
+}
+
+/* Sida två */
+
+.second_page_container{
+    width: 100%;
+    height: 100vh;
+    margin: 0 auto;
+    text-align: center;
+    font-family: 'andale mono', serif;
+
+    .number_in_left_corner{
+        font-size:3.5rem;
+    }
+
+
+    img{
+        width: 50%;
+        padding-bottom: 1rem;
+        
+    }
+
+    p{
+        width: 80%;
+        font-size: 1.4rem;
+        text-align: left;
+        margin: 0 auto;
+        color: $color-paragrahp;
+    }
+
+    .make_reservation_box{
+        border: 1px solid black;
+        width: 70%;
+        margin: 0 auto;
+        padding: 2rem 0;
+        margin-top: 2rem;
+
+        h2{
+            font-size: 2rem;
+        }
+        
+    }
+
+}
+
+.make_reservation_box_arrow{
+    font-size: 2rem;
+    padding-top: 1.5rem;
+    color: black;
+}
+
+.make_reservation_box_arrow:hover{
+    color: lighten(black, 50)
+}
+
+
+
+/* Sida tre */
+
+.third_page_container{
+    background-image: url(../photos/background.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    margin: 0 auto;
+    text-align: center;
+    font-family: 'andale mono', serif;
+
+    .number_in_left_corner{
+        color: white;
+    }
+
+    .logo_and_contact_container{
+        position: relative;
+        top: 20%;
+
+        
+        img{
+        width: 70%;
+        margin-bottom: 4rem;
+        }
+
+        .contact_box{
+            border: 1px solid black;
+            width: 75%;
+            margin: 0 auto;
+            padding: 0.8rem;
+
+            h2{
+                text-decoration: underline;
+                font-weight: 100;
+                font-size: 2rem;
+                padding-bottom: 0.5rem;
+                font-family: 'andale mono', serif;
+            }
+
+            p{
+                font-size: 1.7rem;
+            
+            }
+        
+            .address{
+                text-align: left;
+                color: black;
+
+            }
+
+            .call_us{
+                text-align: right;
+                color: white;
+            }
+       
+        }
+
+        .see_our_menu_box{
+            border: 1px solid black;
+            width: 50%;
+            margin: 0 auto;
+            padding: 1rem 0;
+            color: white;
+            margin-top: 6rem;
+
+            h2{
+                font-size: 2rem;
+            }
+
+            .see_our_menu_arrow{
+                font-size: 2rem;
+                padding-top: 1rem;
+                color: black;
+            }
+        }
+    }
+}
+
+
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    left: 20%;
+  }
+  100% {
+    opacity: 1;
+    left: 0;
+  }
+}
+
+
+

@@ -1,0 +1,108 @@
+
+.navbar-nav{
+    position: fixed;
+    left: 92%;
+    top: 35%;
+    
+    
+
+    li{
+        padding-bottom:7rem;
+    
+    }
+}
+
+
+.first_page_container {
+    background-image: url(../photos/index2.jpg);
+    width: 70vw;
+    height: 100vh;
+    float: right;
+
+    .number_in_left_corner{
+        position: relative;
+        right: 43%;
+    }
+    .icons_on_firstpage{
+        top: 45%;
+    }
+}
+
+/* Ändrar så hamburgermyn inte går över hela sidan */
+.overlay{
+    width: 50%;
+    left: 50%;
+}
+
+/* Loggan och boxen i mitten av indexbilden */
+
+.logo_and_explore_container{
+    top: 30%;
+    right: 35%;
+
+    img{
+        width: 70%;
+    }
+
+    .explore_box{
+        border: 1px solid black;
+        width: 70%;
+        margin: 0 auto;
+        padding: 1.5rem 0 0.5rem 0;
+        font-family: 'copperplate', serif;
+
+        h2{
+            font-size: 3rem;
+        }
+
+        .explore_box_arrow{
+            font-size: 2.5rem;
+            padding-top: 0.8rem;
+        }
+    }
+}
+
+.second_page_container{
+    width: 100%;
+    height: 100vh;
+
+    .number_in_left_corner{
+        position: relative;
+        right: 10%;
+    }
+
+    img{
+        width: 40%;
+    }
+
+    p{
+        width: 70%;
+    }
+
+    .make_reservation_box{
+        width: 40%;
+    }
+}
+
+.third_page_container{
+    background-image: url(../photos/backgroundlarge.jpg);
+
+    .logo_and_contact_container{
+        top: 20%;
+        
+        img{
+        width: 50%;
+        margin-bottom: 2rem;
+        }
+
+    .contact_box{
+        width: 70%;
+        
+        }
+
+        .see_our_menu_box{
+            width: 30%;
+        }
+    }
+}
+

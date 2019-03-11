@@ -1,0 +1,12 @@
+@import "variables";
+
+@import "mobile";
+
+@media screen and(min-width: 750px){
+    @import "tablet";
+}
+
+@media screen and(min-width: 1024px){
+    @import "desktop";
+    
+}

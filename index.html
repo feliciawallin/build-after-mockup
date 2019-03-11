@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bonheur</title>
+
+    <!--Font awesome link-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+        integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+    <!--navbar links-->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+    <!--Egen CSS-->
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+
+    <!--First page-->
+    <div class="first_page_container" id="id_home">
+
+        <!--Dropdown menu-->
+        <div class="button_container" id="toggle"><span class="top"></span><span class="middle"></span><span
+                class="bottom"></span></div>
+        <div class="overlay" id="overlay">
+            <nav class="overlay-menu">
+                <ul>
+                    <li><a href="#id_home">01. HOME</a></li>
+                    <li><a href="#jump_to_page_2">02 .ABOUT BONHEUER</a></li>
+                    <li><a href="#jump_to_page_3">03. CONTACT US</a></li>
+                    <li><a href="#">04. OUR MENU</a></li>
+                </ul>
+
+                <div class="icons">
+                    <ul>
+                        <li><a aria-label="facebook" href="#"><i class="fab fa-facebook"></i></a></li>
+                        <li><a aria-label="instagram" href="#"><i class="fab fa-instagram"></i></a></li>
+                        <li><a aria-label="e-mail" href="#"><i class="far fa-envelope"></i></a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
+        <p class="number_in_left_corner">01.</p>
+
+        <div class="logo_and_explore_container">
+            <img src="photos/benheurlogo.png" alt="Bonheur logo">
+            <div class="explore_box">
+                <h2>EXPLORE</h2>
+                <a href="#jump_to_page_2"><i class="fas fa-angle-down explore_box_arrow"></i></a>
+            </div>
+        </div>
+
+
+        <div class="icons_on_firstpage">
+            <ul>
+                <li><a aria-label="facebook" href="#"><i class="fab fa-facebook"></i></a></li>
+                <li><a aria-label="instagram" href="#"><i class="fab fa-instagram"></i></a></li>
+                <li><a aria-label="e-mail" href="#"><i class="far fa-envelope"></i></a></li>
+            </ul>
+        </div>
+
+
+        <!--side nav-->
+        <div class="navbar transparent navbar-inverse">
+            <div>
+                <ul class="nav navbar-nav">
+                    <li>
+                        <p>Home</p><a href="#id_home">01</a>
+                    </li>
+                    <li>
+                        <p>About</p><a href="#jump_to_page_2">02</a>
+                    </li>
+                    <li>
+                        <p>Contact</p><a href="#jump_to_page_3">03</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <div class="clear"></div>
+
+    <!--Second page-->
+    <div class="second_page_container" id="jump_to_page_2">
+
+        <p class="number_in_left_corner">02.</p>
+
+
+        <img src="photos/BONHEUR.png" alt="Bonheur logo">
+
+        <p>Our restaurant and bar is located in the heart of Stockholm.
+            Surrounded by one of the most beautiful archipelagos in the world. </p><br>
+
+        <p>Make yourself comfortable in our rustic parlor. Have a drink in our cozy
+            coctail bar or enjoy your meal in our bussing yet intimate restaurang.
+            We offer the right place and the right ambience to leace tour daily routine behind
+            and enjoy life together with your friends and family.</p><br>
+
+        <p>Reserve a table for yourself and your beloved one and let ur take you on a culinary journey.
+        </p>
+
+        <div class="make_reservation_box">
+            <h2>Make resevation</h2>
+
+        </div>
+
+        <a href="#jump_to_page_3"><i class="fas fa-angle-down make_reservation_box_arrow"></i></a>
+
+
+    </div>
+
+    <!--Third page-->
+    <div id="jump_to_page_3" class="third_page_container">
+
+        <p class="number_in_left_corner">03.</p>
+
+        <div class="logo_and_contact_container">
+            <img src="photos/Bonheurwhite.png" alt="Bonheur logo">
+            <div class="contact_box">
+                <div class="address">
+                    <h2>ADDRESS:</h2>
+                    <p>Sturegatan 15<br>
+                        114 26 Stockholm</p>
+                </div>
+
+                <div class="call_us">
+                    <h2>CALL US:</h2>
+                    <p>+46 832 447 823</p>
+                </div>
+            </div>
+
+            <div class="see_our_menu_box">
+                <h2>See our menu</h2>
+                <i class="fas fa-angle-down see_our_menu_arrow"></i>
+
+            </div>
+
+        </div>
+
+
+
+    </div>
+
+
+    <script>
+        $('#toggle').click(function () {
+            $(this).toggleClass('active');
+            $('#overlay').toggleClass('open');
+        });
+    </script>
+
+
+</body>
+
+</html>
